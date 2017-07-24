@@ -1,0 +1,34 @@
+
+
+
+/*------------------color----------------------*/
+
+.show-border{
+    border:black solid 2px;
+}
+
+/*----------------start-----------------------*/
+*{
+    @extend .show-border;
+}
+
+.container-main{
+    display:flex;
+    width:80%;
+    margin:auto;
+    .profile{
+        flex-basis: 25%;
+    }
+    .container-main-right{
+        flex-basis: 75%;
+    }
+}
+.profile{
+    .photo{
+        img{
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 50%;
+        }
+    }
+}

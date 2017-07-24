@@ -1,0 +1,20 @@
+/*------------------color----------------------*/
+.show-border, * {
+  border: black solid 2px; }
+
+/*----------------start-----------------------*/
+.container-main {
+  display: flex;
+  width: 80%;
+  margin: auto; }
+  .container-main .profile {
+    flex-basis: 25%; }
+  .container-main .container-main-right {
+    flex-basis: 75%; }
+
+.profile .photo img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 50%; }
+
+/*# sourceMappingURL=style.css.map */

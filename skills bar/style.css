@@ -1,0 +1,62 @@
+$background-color: #1a1a1a;
+$orange: #ffa500;
+$bar-hover:#ff3300;
+$line: #cdcdcd;
+
+*{box-sizing:border-box;}
+
+.main-container{
+  width:50%;
+  margin:auto;
+}
+span{
+  display:block;
+  width:90%;
+  margin:auto;
+}
+.bar-container{
+  height:5px;
+  background-color:$line;
+  position:relative;
+  width:90%;
+  margin:auto;
+  border-radius:5px;
+
+  .skill{
+    height:100%;
+    background-color:$orange;
+    border-radius:5px;
+    transition:0.3s;
+    &:hover{
+        background-color:$bar-hover;
+        height:150%;
+        transition:0.3s;
+        transform:translateY(-1px);
+      }
+    &.html{
+      width:80%;
+    }
+    &.css{
+      width:70%;
+    }
+    &.js{
+      width:60%;
+    }
+    &.jq{
+      width:40%;
+    }
+    &.scss{
+      width:70%;
+    }
+    &.bs{
+      width:50%;
+    }
+    &.java{
+      width:70%;
+    }
+    &.matlab{
+      width:60%;
+    }
+
+  }
+}
