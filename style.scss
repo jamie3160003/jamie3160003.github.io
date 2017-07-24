@@ -9,7 +9,8 @@
 
 /*----------------start-----------------------*/
 *{
-    @extend .show-border;
+    /*@extend .show-border;*/
+    box-sizing: border-box;
 }
 
 .container-main{
@@ -31,4 +32,131 @@
             border-radius: 50%;
         }
     }
+}
+/*--------work-------------*/
+
+$green:#681;
+$primary: #f1c40f;
+$secondary: #ecf0f1;
+$background: #2c3e50;
+.container-work-edu{
+    display:flex;
+    width:100%;
+    .container-work, .container-edu{
+        width:50%;
+        ul{
+            margin:0;
+            position: relative;
+            display:flex;
+            flex-direction:column;
+            list-style-type: none;
+            background:$background;
+            li{
+                height:33.333%;
+                color:$secondary;
+                position:relative;
+                transition:0.5s;
+                padding-left:10px;
+                display:block;
+
+                &:after{ /*time stamp*/
+                content:"";
+                width:10px;
+                height:10px;
+                border-radius:50%;
+                border: $green solid 3px;
+                position:absolute;
+                left:-20px;
+                top:-2px;
+                background:$background;
+                display:block;
+                transition:0.5s;
+            }
+            &:hover:after{
+                transform:scale(1.5);
+                transition:0.5s;
+            }
+
+            }
+            &:before{/*timeline bar*/
+                content:"";
+                display:block;
+                position: absolute;
+                top:0;
+                left:28px;
+                width:3px;
+                height:100%;
+                background:$green;
+            }
+        }
+
+    }
+}
+/*----------skill---------------*/
+
+$skill-orange: #ffa500;
+$bar-hover:#ff3300;
+$line:#cdcdcd;
+
+.container-skills{
+
+    .sub-container{
+      width:50%;
+      margin:auto;
+      span{
+        display:block;
+        width:90%;
+        margin:auto;
+      }
+      .bar-container{
+          height:5px;
+          background-color:$line;
+          position:relative;
+          width:90%;
+          margin:auto;
+          border-radius:5px;
+
+          .skill{
+              height:100%;
+              background-color:$skill-orange;
+              border-radius:5px;
+              transition:0.3s;
+              &:hover{
+                  background-color:$bar-hover;
+                  height:150%;
+                  transition:0.3s;
+                  transform:translateY(-1px);
+              }
+              &.html{
+                  width:80%;
+              }
+              &.css{
+                  width:70%;
+              }
+              &.js{
+                  width:60%;
+              }
+              &.jq{
+                  width:40%;
+              }
+              &.scss{
+                  width:70%;
+              }
+              &.bs{
+                  width:50%;
+              }
+              &.java{
+                  width:70%;
+              }
+              &.matlab{
+                  width:60%;
+              }
+
+          }
+      }
+
+    }
+
+
+
 }

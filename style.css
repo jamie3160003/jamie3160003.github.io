@@ -1,8 +1,12 @@
 /*------------------color----------------------*/
-.show-border, * {
+.show-border {
   border: black solid 2px; }
 
 /*----------------start-----------------------*/
+* {
+  /*@extend .show-border;*/
+  box-sizing: border-box; }
+
 .container-main {
   display: flex;
   width: 80%;
@@ -16,5 +20,94 @@
   max-width: 100%;
   max-height: 100%;
   border-radius: 50%; }
+
+/*--------work-------------*/
+.container-work-edu {
+  display: flex;
+  width: 100%; }
+  .container-work-edu .container-work, .container-work-edu .container-edu {
+    width: 50%; }
+    .container-work-edu .container-work ul, .container-work-edu .container-edu ul {
+      margin: 0;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      list-style-type: none;
+      background: #2c3e50; }
+      .container-work-edu .container-work ul li, .container-work-edu .container-edu ul li {
+        height: 33.333%;
+        color: #ecf0f1;
+        position: relative;
+        transition: 0.5s;
+        padding-left: 10px;
+        display: block; }
+        .container-work-edu .container-work ul li:after, .container-work-edu .container-edu ul li:after {
+          /*time stamp*/
+          content: "";
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          border: #681 solid 3px;
+          position: absolute;
+          left: -20px;
+          top: -2px;
+          background: #2c3e50;
+          display: block;
+          transition: 0.5s; }
+        .container-work-edu .container-work ul li:hover:after, .container-work-edu .container-edu ul li:hover:after {
+          transform: scale(1.5);
+          transition: 0.5s; }
+      .container-work-edu .container-work ul:before, .container-work-edu .container-edu ul:before {
+        /*timeline bar*/
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 28px;
+        width: 3px;
+        height: 100%;
+        background: #681; }
+
+/*----------skill---------------*/
+.container-skills .sub-container {
+  width: 50%;
+  margin: auto; }
+  .container-skills .sub-container span {
+    display: block;
+    width: 90%;
+    margin: auto; }
+  .container-skills .sub-container .bar-container {
+    height: 5px;
+    background-color: #cdcdcd;
+    position: relative;
+    width: 90%;
+    margin: auto;
+    border-radius: 5px; }
+    .container-skills .sub-container .bar-container .skill {
+      height: 100%;
+      background-color: #ffa500;
+      border-radius: 5px;
+      transition: 0.3s; }
+      .container-skills .sub-container .bar-container .skill:hover {
+        background-color: #ff3300;
+        height: 150%;
+        transition: 0.3s;
+        transform: translateY(-1px); }
+      .container-skills .sub-container .bar-container .skill.html {
+        width: 80%; }
+      .container-skills .sub-container .bar-container .skill.css {
+        width: 70%; }
+      .container-skills .sub-container .bar-container .skill.js {
+        width: 60%; }
+      .container-skills .sub-container .bar-container .skill.jq {
+        width: 40%; }
+      .container-skills .sub-container .bar-container .skill.scss {
+        width: 70%; }
+      .container-skills .sub-container .bar-container .skill.bs {
+        width: 50%; }
+      .container-skills .sub-container .bar-container .skill.java {
+        width: 70%; }
+      .container-skills .sub-container .bar-container .skill.matlab {
+        width: 60%; }
 
 /*# sourceMappingURL=style.css.map */
