@@ -159,9 +159,10 @@ html {
 /*--------work-------------*/
 .container-work-edu {
   display: flex;
-  color: #d8dfe2; }
+  color: #d8dfe2;
+  flex-wrap: wrap; }
   .container-work-edu .container-work, .container-work-edu .container-edu {
-    width: 50%; }
+    flex-basis: 50%; }
     .container-work-edu .container-work h1, .container-work-edu .container-edu h1 {
       transition: 1s; }
     .container-work-edu .container-work:hover h1, .container-work-edu .container-edu:hover h1 {
@@ -328,5 +329,22 @@ html {
             transition: 1s; }
         .project-container .web-project-container a .project.notYet {
           visibility: hidden; }
+
+/*responsive*/
+@media (max-width: 1200px) {
+  .container-main {
+    width: 100%; } }
+@media (max-width: 1000px) {
+  .profile div {
+    flex-basis: auto; }
+
+  .container-work-edu {
+    flex-direction: column; }
+    .container-work-edu .container-work,
+    .container-work-edu .container-edu {
+      flex-basis: 100%; } }
+@media (max-width: 700px) {
+  .nav-container nav {
+    width: 100%; } }
 
 /*# sourceMappingURL=style.css.map */

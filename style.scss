@@ -232,9 +232,10 @@ $primary: #f1c40f;
 .container-work-edu{
     display:flex;
     color:$gray-white;
+    flex-wrap: wrap;
     @extend .container ;
     .container-work, .container-edu{
-        width:50%;
+        flex-basis:50%;
         h1{
             transition: 1s;
         }
@@ -480,3 +481,39 @@ $text:#1a1a1a;
     }
 
 }
+/*responsive*/
+
+
+
+
+@media(max-width: 1200px){
+    .container-main{
+        width:100%;
+    }
+
+};
+
+@media(max-width: 1000px){
+    .profile{
+        div{
+            flex-basis: auto;
+        }
+    }
+    .container-work-edu{
+        flex-direction: column;
+        .container-work,
+        .container-edu{
+            flex-basis: 100%;
+        }
+    }
+
+};
+
+@media(max-width: 700px){
+    .nav-container{
+        nav{
+            width:100%;
+        }
+    }
+
+};
