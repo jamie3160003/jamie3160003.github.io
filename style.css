@@ -101,8 +101,10 @@ html {
   .profile .about-container {
     padding: 0 15px; }
     .profile .about-container h1 {
-      font-family: "Fredoka One", cursive; }
-    .profile .about-container p, .profile .about-container h1 {
+      font-family: "Fredoka One", cursive;
+      transition: 1s; }
+    .profile .about-container p {
+      font-family: "Roboto", sans-serif;
       transition: 1s; }
     .profile .about-container:hover p, .profile .about-container:hover h1 {
       color: #ff6900; }
@@ -112,6 +114,7 @@ html {
     transition: 1s;
     font-family: "Fredoka One", cursive; }
   .profile .contact-container span {
+    font-family: "Roboto", sans-serif;
     display: block;
     padding-left: 10px;
     transition: 0.5s;

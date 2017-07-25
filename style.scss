@@ -141,8 +141,10 @@ $bg-dl:rgba(188,188,188,0.8);
         padding:0 15px;
         h1{
             font-family: $title-font;
+            transition: 1s;
         }
-        p,h1{
+        p{
+            font-family:$content-font;
             transition: 1s;
         }
         &:hover{
@@ -163,6 +165,7 @@ $bg-dl:rgba(188,188,188,0.8);
             font-family: $title-font;
         }
         span{
+            font-family:$content-font;
             display:block;
             padding-left:10px;
             transition:0.5s;
