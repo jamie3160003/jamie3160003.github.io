@@ -2,6 +2,8 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript" src="./main.js"></script>
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <title>Yu-Jen Portfolio</title>
@@ -9,13 +11,32 @@
     <body>
         <div class="container-main">
 
-            <div class="profile">
+            <!---nav bar----->
+            <div class="nav-placeHolder"></div>
+
+            <div class="nav-container">
+                <nav>
+                    <span class="about">About</span>
+                    <span class="exp">Experience</span>
+                    <span class="proj">Projects</span>
+                    <span class="prog">Programming Skills</span>
+                </nav>
+            </div>
+
+            <!---nav bar----->
+
+            <!---profile----------------------------------->
+            <div id="section1" class="profile">
                 <div class="photo-container">
                     <img src="./img/myPhoto.jpeg" alt="myPhoto">
                 </div>
                 <div class="about-container">
                     <h1>About Me</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidun</p>
+                    <p>My name is Yu-Jen. I love coding. Building state-of-the-art, user-friendly websites and applications are truly a passion of mine.
+                       I recently completed the Front-End Certificate on FreeCodeCamp. I am now focusing on learning ReactJs, and building some applications based on it.
+                       I consider myself to be a results-oriented, sincere, dependable,capable worker and fast learner who will be a strong asset to your organization.
+
+                    </p>
                 </div>
                 <div class="contact-container">
                     <h1>Contact</h1>
@@ -24,181 +45,222 @@
                         <span><i class="fa fa-phone" aria-hidden="true"></i>949-381-8960</span>
                         <span><i class="fa fa-home" aria-hidden="true"></i>18817 Galleano St, La Puente, CA</span>
                         <div class="social">
-                            <span><i class="fa fa-facebook-official" aria-hidden="true"></i></span>
-                            <span><i class="fa fa-linkedin-square" aria-hidden="true"></i></span>
-                            <span><i class="fa fa-github-square" aria-hidden="true"></i> </span>
+                            <a href="https://www.facebook.com/jamie3160003" target="_blank"><span><i class="fa fa-facebook-official" aria-hidden="true"></i></span></a>
+                            <a href="http://www.linkedin.com/in/jamie3160003" target="_blank"><span><i class="fa fa-linkedin-square" aria-hidden="true"></i></span></a>
+                            <a href="https://github.com/jamie3160003" target="_blank"><span><i class="fa fa-github-square" aria-hidden="true"></i> </span></a>
                         </div>
 
                         <div class="download">
-                            <span><i class="fa fa-cloud-download" aria-hidden="true"></i></span>
+                            <a href="https://drive.google.com/file/d/0B1X4_0PtzLlLTjJOeWJFM2gtVEU/view?usp=sharing" target="_blank"><span><i class="fa fa-cloud-download" aria-hidden="true"></i></span></a>
                         </div>
 
 
                     </div>
                 </div>
-            </div><!---profile---->
+            </div><!---profile----------------------------------->
 
-            <div class="container-main-right">
+            <div id="section2" class="container-work-edu"><!--work-edu-->
 
-                <div class="container-work-edu"><!--work-edu-->
+                <div class="container-work">
 
-                    <div class="container-work">
+                    <h1><span class="title-icon-container"><i class="fa fa-briefcase icon"></i></span>Work Experience</h1>
+                    <ul>
+                        <li>
+                            <h2><a href="https://www.freecodecamp.org/" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i> FreeCodeCamp</a></h2>
+                            <p><i class="fa fa-calendar icon"></i> 2017-now</p>
+                            <p>
+                                <i class="fa fa-caret-right" aria-hidden="true"></i> Learn front end development skills(HTML, CSS, Javascript, JQuery, and AJAX).
+                                <br>
+                                <i class="fa fa-caret-right" aria-hidden="true"></i> Earned a <a href="https://drive.google.com/file/d/0B1X4_0PtzLlLdXJqckZlLWVNbk0/view?usp=sharing" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i> front end certificate</a> after accomplished 8 projects and 400 hours of learning.
+                            </p>
 
-                        <h1><span class="title-icon-container"><i class="fa fa-briefcase icon"></i></span>Work Experience</h1>
-                        <ul>
-                            <li>
-                                <h2>FreeCodeCamp</h2>
-                                <p>2017-now</p>
-                                <p>
-                                    Learn front end development skills(HTML, CSS, Javascript, JQuery, and AJAX).
-                                    <br>
-                                    Earned a front end certificate after accomplished 8 projects and 400 hours of learning.
-                                </p>
+                        </li>
+                        <li>
+                            <h2>Process Engineer</h2>
+                            <p>@Advanced Semiconductor Engineering Inc.</p>
+                            <p><i class="fa fa-calendar icon"></i> 2012-2014</p>
+                            <p>
+                                <i class="fa fa-caret-right" aria-hidden="true"></i> Boosted the productivity by development of new manufacturing processes.
+                                <br>
+                                <i class="fa fa-caret-right" aria-hidden="true"></i> Optimization of production lines and elimination of errors.
+                            </p>
 
-                            </li>
-                            <li>
-                                <h2>Process Engineer</h2>
-                                <p>2012-2014</p>
-                                <p>
-                                    Boosted the productivity by development of new manufacturing processes.
-                                    <br>
-                                    Optimization of production lines and elimination of errors.
-                                </p>
+                        </li>
 
-                            </li>
+                        <li>
+                            <h2>Coast Guard</h2>
+                            <p>@Taiwan Navy</p>
+                            <p><i class="fa fa-calendar icon"></i> 2011-2012</p>
+                            <p>
+                                <i class="fa fa-caret-right" aria-hidden="true"></i> Guarded Taiwan’s southern coast.
+                                <br>
+                                <i class="fa fa-caret-right" aria-hidden="true"></i> Partook in rescue missions during natural disasters.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
 
-                            <li>
-                                <h2>Coast Guard</h2>
-                                <p>2011-2012</p>
-                                <p>
-                                    Guarded Taiwan’s southern coast.
-                                    <br>
-                                    Partook in rescue missions during natural disasters.
-                                </p>
-                            </li>
-                        </ul>
-                    </div>
+                <div class="container-edu">
+                    <h1><span class="title-icon-container"><i class="fa fa-university icon"></i></span>Education</h1>
+                    <ul>
+                        <li>
+                            <h2>University of California, Irvine</h2>
+                            <p><i class="fa fa-calendar icon"></i> 09/2015-04/2017</p>
+                            <p>Master of Science in Electrical and Computer Engineering</p>
+                            <p>GPA: 3.57/4.00</p>
 
-                    <div class="container-edu">
-                        <h1><span class="title-icon-container"><i class="fa fa-university icon"></i></span>Education</h1>
-                        <ul>
-                            <li>
-                                <h2>University of California, Irvine</h2>
-                                <p>Master of Science in Electrical and Computer Engineering</p>
-                                <p>GPA: 3.57/4.00</p>
-                                <p>09/2015-04/2017</p>
-                            </li>
-                            <li>
-                                <h2>National Chung Hsing University</h2>
-                                <p>Bachelor of Science in Physics</p>
-                                <p>09/2007-06/2011</p>
-                            </li>
+                        </li>
+                        <li>
+                            <h2>National Chung Hsing University</h2>
+                            <p><i class="fa fa-calendar icon"></i> 09/2007-06/2011</p>
+                            <p>Bachelor of Science in Physics</p>
 
-                        </ul>
-                    </div>
-                </div><!--work-edu-->
+                        </li>
 
-                <div class="container-skills">
-                    <h1><span class="title-icon-container"><i class="fa fa-laptop icon"></i></span>Programming skills</h1>
-                    <div class="sub-container">
+                    </ul>
+                </div>
+            </div><!--work-edu-->
 
-                        <span>HTML</span>
-                        <div class="bar-container">
-                            <div class="skill html"></div>
-                        </div>
+            <div id="section3" class="project-container">
+                <h1><span class="title-icon-container"><i class="fa fa-tasks icon"></i></span>Projects</h1>
 
-                        <span>CSS/SCSS</span>
-                        <div class="bar-container html">
-                            <div class="skill css"></div>
-                        </div>
+                <div class="web-project-container">
 
-                        <span>Javascript</span>
-                        <div class="bar-container">
-                            <div class="skill js"></div>
-                        </div>
-
-                        <span>JQuery</span>
-                        <div class="bar-container">
-                            <div class="skill jq"></div>
-                        </div>
-
-
-                        <span>Bootstrap</span>
-                        <div class="bar-container">
-                            <div class="skill bs"></div>
-                        </div>
-
-                        <span>Java</span>
-                        <div class="bar-container">
-                            <div class="skill java"></div>
-                        </div>
-
-                        <span>Matlab</span>
-                        <div class="bar-container">
-                            <div class="skill matlab"></div>
-                        </div>
-
-                        </div>
-
-
-                </div><!--container-skills-->
-
-                <div class="project-container">
-                    <h1><span class="title-icon-container"><i class="fa fa-tasks icon"></i></span>Projects</h1>
                     <h2>Web Applications</h2>
-                    <div class="web-project-container">
+
+                    <a href="https://codepen.io/jamie3160003/full/qjgrYe/" target="_blank">
                         <div class="project calculator">
                             <span class="detail">Calculator</span>
                         </div>
+                    </a>
 
+
+
+                    <a href="https://codepen.io/jamie3160003/full/JJQezX/" target="_blank">
                         <div class="project simon">
                             <span class="detail">Simon Game</span>
                         </div>
+                    </a>
 
+                    <a href="https://codepen.io/jamie3160003/full/OgqorR/" target="_blank">
                         <div class="project tic-tac-toe">
                             <span class="detail">Tic Tac Toe Game</span>
                         </div>
+                    </a>
 
+                    <a href="https://codepen.io/jamie3160003/full/pwYywQ/" target="_blank">
                         <div class="project pomodoro">
                             <span class="detail">Pomodoro Clock</span>
                         </div>
+                    </a>
 
+                    <a href="https://codepen.io/jamie3160003/full/LLJbpm/" target="_blank">
                         <div class="project weather">
                             <span class="detail">Weather App</span>
                         </div>
+                    </a>
 
+                    <a href="https://codepen.io/jamie3160003/full/JJaQVo/" target="_blank">
                         <div class="project wiki">
                             <span class="detail">Wikipedia Viewer</span>
                         </div>
+                    </a>
 
+                    <a href="https://codepen.io/jamie3160003/full/MoVdeB/" target="_blank">
                         <div class="project twitch">
                             <span class="detail">Twitch Tv API</span>
                         </div>
+                    </a>
 
+                    <a href="https://codepen.io/jamie3160003/full/YQOpzO/" target="_blank">
                         <div class="project randomQuote">
                             <span class="detail">Random Quotes Generator</span>
                         </div>
+                    </a>
 
-                    </div><!--web-project-container-->
 
+                </div><!--web-project-container-->
+
+                <div class="other-project">
                     <h2>Algorithms Implementation</h2>
-                    <p>Implement Dijkstra algorithms in Java.</p>
-
-                    <h2>Nachos Operation System</h2>
-                    <p>Improve Nachos by designing and implementing missing and inadequate portions of the system.</p>
-
-                    <h2>Digital Image Process</h2>
-                    <p>Use the advanced image processing techniques to images and enhance or alter the picture quality as per the project needs.</p>
-
-                    <h2>Random Process Simulation</h2>
-                    <p>Simulate and analyze random processes (Bernoulli, Poisson and Gaussian…etc).</p>
-
-                    <h2>Boost Converter</h2>
-                    <p>Simulate and design a boost converter. Build up and analyze the boost converter afterward.</p>
-
+                    <p><i class="fa fa-caret-right" aria-hidden="true"></i> Implement Dijkstra algorithms in Java.</p>
                 </div>
 
-            </div><!--main-right-->
+                <div class="other-project">
+                    <h2>Nachos Operation System</h2>
+                    <p><i class="fa fa-caret-right" aria-hidden="true"></i> Improve Nachos by designing and implementing missing and inadequate portions of the system.</p>
+                </div>
+
+                <div class="other-project">
+                    <h2>Digital Image Process</h2>
+                    <p><i class="fa fa-caret-right" aria-hidden="true"></i> Use the advanced image processing techniques to images and enhance or alter the picture quality as per the project needs.</p>
+                </div>
+
+                <div class="other-project">
+                    <h2>Random Process Simulation</h2>
+                    <p><i class="fa fa-caret-right" aria-hidden="true"></i> Simulate and analyze random processes (Bernoulli, Poisson and Gaussian…etc).</p>
+                </div>
+
+                <div class="other-project">
+                    <h2>Boost Converter</h2>
+                    <p><i class="fa fa-caret-right" aria-hidden="true"></i> Simulate and design a boost converter. Build up and analyze the boost converter afterward.</p>
+                </div>
+
+
+
+
+
+
+
+
+
+            </div>
+
+            <div id="section4" class="container-skills">
+                <h1><span class="title-icon-container"><i class="fa fa-laptop icon"></i></span>Programming skills</h1>
+                <div class="sub-container">
+
+                    <span>HTML</span>
+                    <div class="bar-container">
+                        <div class="skill html"></div>
+                    </div>
+
+                    <span>CSS/SCSS</span>
+                    <div class="bar-container html">
+                        <div class="skill css"></div>
+                    </div>
+
+                    <span>Javascript</span>
+                    <div class="bar-container">
+                        <div class="skill js"></div>
+                    </div>
+
+                    <span>JQuery</span>
+                    <div class="bar-container">
+                        <div class="skill jq"></div>
+                    </div>
+
+
+                    <span>Bootstrap</span>
+                    <div class="bar-container">
+                        <div class="skill bs"></div>
+                    </div>
+
+                    <span>Java</span>
+                    <div class="bar-container">
+                        <div class="skill java"></div>
+                    </div>
+
+                    <span>Matlab</span>
+                    <div class="bar-container">
+                        <div class="skill matlab"></div>
+                    </div>
+
+                    </div>
+
+
+            </div><!--container-skills-->
+
 
         </div>
 

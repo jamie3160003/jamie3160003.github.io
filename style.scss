@@ -4,7 +4,8 @@ $pri:rgb(23,109,129);
 $sec:rgb(113,173,181);
 $gray:rgb(187,187,187);
 $gray-white:rgb(216,223,226);
-$hover-orange: #ffa500;
+$hover-orange:rgb(255, 105, 0);/*#AA0078;#ffa500;*/
+$nav-bg:rgb(63,63,63);
 /*---------font family---------------*/
 @import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One|Fredoka+One');
 @import url('https://fonts.googleapis.com/css?family=Fredoka+One|Ubuntu+Mono');
@@ -22,12 +23,14 @@ $content-font: 'Roboto', sans-serif;
 }
 
 .container{
+    border-radius: 5px;
     width:80%;
     margin:30px auto;
-    background-color: $sec;
+    background-color: $pri;
     padding:30px;
     box-shadow: 5px 5px 5px black;
     border-bottom: $gray 5px solid;
+    color:$gray-white;
     h1{
         font-family: $title-font;
     }
@@ -40,8 +43,19 @@ $content-font: 'Roboto', sans-serif;
         margin-right: 5px;
         border-radius: 50%;
         background-color: $background;
-        color:$gray-white;
+
+
     }
+}
+
+a,a:hover,a:active{
+    text-decoration: none;
+    color:inherit;
+}
+
+.focus{
+    color:$hover-orange;
+    transform:scale(1.1);
 }
 
 /*----------------start-----------------------*/
@@ -67,6 +81,39 @@ $bg-dl:rgba(188,188,188,0.8);
     box-sizing:border-box;
     /*border: solid purple 1px;*/
 }
+
+/*----------------nav----------------------------*/
+
+.nav-container{
+    width:100%;
+    position:fixed;
+    left:0;
+    top:0;
+    z-index: 3;
+    nav{
+        background-color: $sec;
+        display:flex;
+        width:63.5%;
+        margin:auto;
+        padding:5px 0;
+        flex-direction: row;
+        color:$gray-white;
+        box-shadow: 0 5px 5px black;
+
+        span{
+            font-family: $title-font;
+            padding:10px;
+            cursor:pointer;
+            transition:0.5s;
+            &:hover{
+                color:$hover-orange;
+                transform:scale(1.1);
+            }
+        }
+    }
+}
+
+/*----------------profile--------------------------*/
 .profile{
     width:80%;
     display:flex;
@@ -93,18 +140,24 @@ $bg-dl:rgba(188,188,188,0.8);
         h1{
             font-family: $title-font;
         }
-        p{
+        p,h1{
             transition: 1s;
         }
         &:hover{
 
-            p{
+            p,h1{
                 color:$hover-orange;
             }
         }
     }
     .contact-container{
+        &:hover{
+            h1{
+                color:$hover-orange;
+            }
+        }
         h1{
+            transition: 1s;
             font-family: $title-font;
         }
         span{
@@ -179,16 +232,10 @@ $primary: #f1c40f;
         width:50%;
         h1{
             transition: 1s;
-            .title-icon-container{
-                transition: 1s;
-            }
         }
         &:hover{
             h1{
                 color: $hover-orange;
-                .title-icon-container{
-                    color: $hover-orange;
-                }
             }
 
         }
@@ -256,6 +303,10 @@ $line:#cdcdcd;
 .container-skills{
     @extend .container;
     color:$gray-white;
+    transition: 1s;
+    &:hover{
+        color:$hover-orange;
+    }
 
     .sub-container{
       width:50%;
@@ -328,71 +379,99 @@ $text:#1a1a1a;
     @extend .container;
     color:$gray-white;
 
+    h1{
+        transition:1s;
+    }
+    &:hover{
+        h1{
+            color:$hover-orange;
+        }
+
+    }
+    .other-project{
+        transition:1s;
+        &:hover{
+            color:$hover-orange;
+        }
+    }
+
     .web-project-container{
         width:100%;
         margin:auto;
         display:flex;
         flex-wrap: wrap;
-        .project{
+        h2{
+            flex-basis:100%;
+            transition:1s;
+        }
+        &:hover{
+            color:$hover-orange;
+        }
+        a{
             flex-basis:25%;
             flex-grow:1;
-            margin:10px;
-            background-color:$pri;
-            height:150px;
-            position:relative;
-            border-radius: 5px;
-            box-shadow: 3px 3px 3px black;
-            background-size: 90% 90%;
-            background-repeat: no-repeat;
-            background-position: center;
-            cursor: pointer;
-            transition: 1s;
-            &.calculator{
-                background-image: url(./img/calculator.png);
-            }
-            &.simon{
-                background-image: url(./img/simonGame.png);
-            }
-            &.tic-tac-toe{
-                background-image: url(./img/ticTacToe.png);
-            }
-            &.pomodoro{
-                background-image: url(./img/pomodoroClock.png);
-            }
-            &.weather{
-                background-image: url(./img/weatherApp.png);
-            }
-            &.wiki{
-                background-image: url(./img/wikiviwer.png);
-            }
-            &.twitch{
-                background-image: url(./img/twitchTv.png);
-            }
-            &.randomQuote{
-                background-image: url(./img/randomQuote.png);
-            }
-            .detail{
-                width:100%;
-                text-align:center;
-                position:absolute;
-                color:$text;
-                background-color:$text-background;
-                bottom:0;
-                padding:10px;
-                opacity:0;
-                transition: 1s;
-            }
-            &:hover{
-                transform:scale(1.05);
+            .project{
+
+                margin:10px;
+                background-color:$sec;
+                height:150px;
+                position:relative;
+                border-radius: 5px;
+                box-shadow: 3px 3px 3px black;
+                background-size: 90% 90%;
+                background-repeat: no-repeat;
+                background-position: center;
+                cursor: pointer;
+                transition: transform 1s;
+                &.calculator{
+                    background-image: url(./img/calculator.png);
+                }
+                &.simon{
+                    background-image: url(./img/simonGame.png);
+                }
+                &.tic-tac-toe{
+                    background-image: url(./img/ticTacToe.png);
+                }
+                &.pomodoro{
+                    background-image: url(./img/pomodoroClock.png);
+                }
+                &.weather{
+                    background-image: url(./img/weatherApp.png);
+                }
+                &.wiki{
+                    background-image: url(./img/wikiviwer.png);
+                }
+                &.twitch{
+                    background-image: url(./img/twitchTv.png);
+                }
+                &.randomQuote{
+                    background-image: url(./img/randomQuote.png);
+                }
                 .detail{
-                  opacity:1;
+                    width:100%;
+                    text-align:center;
+                    position:absolute;
+                    color:$text;
+                    background-color:$text-background;
+                    bottom:0;
+                    padding:10px;
+                    opacity:0;
                     transition: 1s;
                 }
-            }
-            &.notYet{
-                visibility:hidden;
+                &:hover{
+                    border:2px solid $hover-orange;
+                    transform:scale(1.05);
+                    .detail{
+                      opacity:1;
+                        transition: 1s;
+                    }
+                }
+                &.notYet{
+                    visibility:hidden;
+                }
             }
         }
+
     }
 
 }
