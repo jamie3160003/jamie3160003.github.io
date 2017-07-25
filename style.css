@@ -1,46 +1,145 @@
-/*------------------color----------------------*/
+/*---------color----------------------------*/
+/*---------font family---------------*/
+@import url("https://fonts.googleapis.com/css?family=Alfa+Slab+One|Fredoka+One");
+@import url("https://fonts.googleapis.com/css?family=Fredoka+One|Ubuntu+Mono");
+@import url("https://fonts.googleapis.com/css?family=Roboto|Ubuntu+Mono");
+/*------------------global----------------------*/
 .show-border {
   border: black solid 2px; }
+
+.container, .container-work-edu, .container-skills, .project-container {
+  width: 80%;
+  margin: 30px auto;
+  background-color: #71adb5;
+  padding: 30px;
+  box-shadow: 5px 5px 5px black;
+  border-bottom: #bbbbbb 5px solid; }
+  .container h1, .container-work-edu h1, .container-skills h1, .project-container h1 {
+    font-family: "Fredoka One", cursive; }
+  .container h2, .container-work-edu h2, .container-skills h2, .project-container h2, .container p, .container-work-edu p, .container-skills p, .project-container p, .container span, .container-work-edu span, .container-skills span, .project-container span {
+    font-family: "Roboto", sans-serif; }
+  .container .title-icon-container, .container-work-edu .title-icon-container, .container-skills .title-icon-container, .project-container .title-icon-container {
+    padding: 10px;
+    margin-right: 5px;
+    border-radius: 50%;
+    background-color: #0d3446;
+    color: #d8dfe2; }
 
 /*----------------start-----------------------*/
 * {
   /*@extend .show-border;*/
   box-sizing: border-box; }
 
+html {
+  background-color: #0d3446; }
+
 .container-main {
-  display: flex;
   width: 80%;
   margin: auto; }
-  .container-main .profile {
-    flex-basis: 25%; }
-  .container-main .container-main-right {
-    flex-basis: 75%; }
 
-.profile .photo img {
-  max-width: 100%;
-  max-height: 100%;
-  border-radius: 50%; }
+/*-----------------profile------------------------*/
+* {
+  box-sizing: border-box;
+  /*border: solid purple 1px;*/ }
+
+.profile {
+  width: 80%;
+  display: flex;
+  margin: auto;
+  color: #d8dfe2;
+  flex-wrap: wrap;
+  padding-bottom: 20px; }
+  .profile div {
+    flex-basis: 33%;
+    flex-grow: 1; }
+  .profile .photo-container {
+    position: relative;
+    display: flex; }
+    .profile .photo-container img {
+      height: 80%;
+      width: 80%;
+      margin: auto;
+      border-radius: 50%; }
+  .profile .about-container {
+    padding: 0 15px; }
+    .profile .about-container h1 {
+      font-family: "Fredoka One", cursive; }
+    .profile .about-container p {
+      transition: 1s; }
+    .profile .about-container:hover p {
+      color: #ffa500; }
+  .profile .contact-container h1 {
+    font-family: "Fredoka One", cursive; }
+  .profile .contact-container span {
+    display: block;
+    padding-left: 10px;
+    transition: 0.5s;
+    padding-top: 5px; }
+    .profile .contact-container span i {
+      font-size: 150%;
+      padding-right: 10px; }
+    .profile .contact-container span:hover {
+      color: #ffa500; }
+      .profile .contact-container span:hover i {
+        transform: scale(1.2); }
+  .profile .contact-container .social {
+    display: flex;
+    padding-top: 10px; }
+    .profile .contact-container .social span i {
+      padding: 0;
+      font-size: 300%; }
+  .profile .contact-container .download {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex; }
+    .profile .contact-container .download span {
+      position: relative; }
+      .profile .contact-container .download span i {
+        font-size: 300%; }
+      .profile .contact-container .download span:after {
+        /*download message box*/
+        content: "Download Resume";
+        background-color: rgba(188, 188, 188, 0.8);
+        color: white;
+        height: 25px;
+        position: absolute;
+        right: -130px;
+        bottom: -0px;
+        opacity: 0;
+        padding: 5px 3px;
+        border-radius: 5px; }
+      .profile .contact-container .download span:hover:after {
+        opacity: 1;
+        transition: 1s; }
 
 /*--------work-------------*/
 .container-work-edu {
   display: flex;
-  width: 100%; }
+  color: #d8dfe2; }
   .container-work-edu .container-work, .container-work-edu .container-edu {
     width: 50%; }
+    .container-work-edu .container-work h1, .container-work-edu .container-edu h1 {
+      transition: 1s; }
+      .container-work-edu .container-work h1 .title-icon-container, .container-work-edu .container-edu h1 .title-icon-container {
+        transition: 1s; }
+    .container-work-edu .container-work:hover h1, .container-work-edu .container-edu:hover h1 {
+      color: #ffa500; }
+      .container-work-edu .container-work:hover h1 .title-icon-container, .container-work-edu .container-edu:hover h1 .title-icon-container {
+        color: #ffa500; }
     .container-work-edu .container-work ul, .container-work-edu .container-edu ul {
       margin: 0;
       position: relative;
       display: flex;
       flex-direction: column;
-      list-style-type: none;
-      background: #2c3e50; }
+      list-style-type: none; }
       .container-work-edu .container-work ul li, .container-work-edu .container-edu ul li {
         height: 33.333%;
-        color: #ecf0f1;
         position: relative;
         transition: 0.5s;
         padding-left: 10px;
         display: block; }
+        .container-work-edu .container-work ul li h2, .container-work-edu .container-work ul li p, .container-work-edu .container-edu ul li h2, .container-work-edu .container-edu ul li p {
+          transition: 1s; }
         .container-work-edu .container-work ul li:after, .container-work-edu .container-edu ul li:after {
           /*time stamp*/
           content: "";
@@ -49,14 +148,17 @@
           border-radius: 50%;
           border: #681 solid 3px;
           position: absolute;
-          left: -20px;
-          top: -2px;
-          background: #2c3e50;
+          left: -18px;
+          top: 25px;
+          background: #0d3446;
           display: block;
           transition: 0.5s; }
         .container-work-edu .container-work ul li:hover:after, .container-work-edu .container-edu ul li:hover:after {
+          border-color: #ffa500;
           transform: scale(1.5);
           transition: 0.5s; }
+        .container-work-edu .container-work ul li:hover h2, .container-work-edu .container-work ul li:hover p, .container-work-edu .container-edu ul li:hover h2, .container-work-edu .container-edu ul li:hover p {
+          color: #ffa500; }
       .container-work-edu .container-work ul:before, .container-work-edu .container-edu ul:before {
         /*timeline bar*/
         content: "";
@@ -69,45 +171,104 @@
         background: #681; }
 
 /*----------skill---------------*/
-.container-skills .sub-container {
-  width: 50%;
-  margin: auto; }
-  .container-skills .sub-container span {
-    display: block;
-    width: 90%;
-    margin: auto; }
-  .container-skills .sub-container .bar-container {
-    height: 5px;
-    background-color: #cdcdcd;
-    position: relative;
-    width: 90%;
-    margin: auto;
-    border-radius: 5px; }
-    .container-skills .sub-container .bar-container .skill {
-      height: 100%;
-      background-color: #ffa500;
+.container-skills {
+  color: #d8dfe2; }
+  .container-skills .sub-container {
+    width: 50%;
+    font-family: "Ubuntu Mono", monospace; }
+    .container-skills .sub-container span {
+      display: block;
+      margin: auto;
+      font-size: 110%; }
+    .container-skills .sub-container .bar-container {
+      height: 11px;
+      background-color: #cdcdcd;
+      position: relative;
+      width: 90%;
+      margin: auto;
       border-radius: 5px;
-      transition: 0.3s; }
-      .container-skills .sub-container .bar-container .skill:hover {
+      margin: 5px 0; }
+      .container-skills .sub-container .bar-container:hover .skill {
         background-color: #ff3300;
         height: 150%;
         transition: 0.3s;
-        transform: translateY(-1px); }
-      .container-skills .sub-container .bar-container .skill.html {
-        width: 80%; }
-      .container-skills .sub-container .bar-container .skill.css {
-        width: 70%; }
-      .container-skills .sub-container .bar-container .skill.js {
-        width: 60%; }
-      .container-skills .sub-container .bar-container .skill.jq {
-        width: 40%; }
-      .container-skills .sub-container .bar-container .skill.scss {
-        width: 70%; }
-      .container-skills .sub-container .bar-container .skill.bs {
-        width: 50%; }
-      .container-skills .sub-container .bar-container .skill.java {
-        width: 70%; }
-      .container-skills .sub-container .bar-container .skill.matlab {
-        width: 60%; }
+        transform: translateY(-2px); }
+      .container-skills .sub-container .bar-container .skill {
+        height: 100%;
+        background-color: #ffa500;
+        border-radius: 5px;
+        transition: 0.3s; }
+        .container-skills .sub-container .bar-container .skill.html {
+          width: 80%; }
+        .container-skills .sub-container .bar-container .skill.css {
+          width: 70%; }
+        .container-skills .sub-container .bar-container .skill.js {
+          width: 60%; }
+        .container-skills .sub-container .bar-container .skill.jq {
+          width: 40%; }
+        .container-skills .sub-container .bar-container .skill.scss {
+          width: 70%; }
+        .container-skills .sub-container .bar-container .skill.bs {
+          width: 50%; }
+        .container-skills .sub-container .bar-container .skill.java {
+          width: 70%; }
+        .container-skills .sub-container .bar-container .skill.matlab {
+          width: 60%; }
+
+/*--------projects---------------------*/
+.project-container {
+  color: #d8dfe2; }
+  .project-container .web-project-container {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap; }
+    .project-container .web-project-container .project {
+      flex-basis: 25%;
+      flex-grow: 1;
+      margin: 10px;
+      background-color: #176d81;
+      height: 150px;
+      position: relative;
+      border-radius: 5px;
+      box-shadow: 3px 3px 3px black;
+      background-size: 90% 90%;
+      background-repeat: no-repeat;
+      background-position: center;
+      cursor: pointer;
+      transition: 1s; }
+      .project-container .web-project-container .project.calculator {
+        background-image: url(./img/calculator.png); }
+      .project-container .web-project-container .project.simon {
+        background-image: url(./img/simonGame.png); }
+      .project-container .web-project-container .project.tic-tac-toe {
+        background-image: url(./img/ticTacToe.png); }
+      .project-container .web-project-container .project.pomodoro {
+        background-image: url(./img/pomodoroClock.png); }
+      .project-container .web-project-container .project.weather {
+        background-image: url(./img/weatherApp.png); }
+      .project-container .web-project-container .project.wiki {
+        background-image: url(./img/wikiviwer.png); }
+      .project-container .web-project-container .project.twitch {
+        background-image: url(./img/twitchTv.png); }
+      .project-container .web-project-container .project.randomQuote {
+        background-image: url(./img/randomQuote.png); }
+      .project-container .web-project-container .project .detail {
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        color: #1a1a1a;
+        background-color: rgba(188, 188, 188, 0.8);
+        bottom: 0;
+        padding: 10px;
+        opacity: 0;
+        transition: 1s; }
+      .project-container .web-project-container .project:hover {
+        transform: scale(1.05); }
+        .project-container .web-project-container .project:hover .detail {
+          opacity: 1;
+          transition: 1s; }
+      .project-container .web-project-container .project.notYet {
+        visibility: hidden; }
 
 /*# sourceMappingURL=style.css.map */

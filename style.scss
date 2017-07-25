@@ -1,63 +1,212 @@
+/*---------color----------------------------*/
+$background:#0d3446;
+$pri:rgb(23,109,129);
+$sec:rgb(113,173,181);
+$gray:rgb(187,187,187);
+$gray-white:rgb(216,223,226);
+$hover-orange: #ffa500;
+/*---------font family---------------*/
+@import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One|Fredoka+One');
+@import url('https://fonts.googleapis.com/css?family=Fredoka+One|Ubuntu+Mono');
+@import url('https://fonts.googleapis.com/css?family=Roboto|Ubuntu+Mono');
+$title-font:'Fredoka One', cursive;
+$skill-font:'Ubuntu Mono', monospace;
+$content-font: 'Roboto', sans-serif;
 
 
 
-/*------------------color----------------------*/
+/*------------------global----------------------*/
 
 .show-border{
     border:black solid 2px;
+}
+
+.container{
+    width:80%;
+    margin:30px auto;
+    background-color: $sec;
+    padding:30px;
+    box-shadow: 5px 5px 5px black;
+    border-bottom: $gray 5px solid;
+    h1{
+        font-family: $title-font;
+    }
+    h2,p,span{
+        font-family: $content-font;
+    }
+    .title-icon-container{
+
+        padding:10px;
+        margin-right: 5px;
+        border-radius: 50%;
+        background-color: $background;
+        color:$gray-white;
+    }
 }
 
 /*----------------start-----------------------*/
 *{
     /*@extend .show-border;*/
     box-sizing: border-box;
+
+}
+html{
+    background-color: $background;
 }
 
 .container-main{
-    display:flex;
     width:80%;
     margin:auto;
-    .profile{
-        flex-basis: 25%;
-    }
-    .container-main-right{
-        flex-basis: 75%;
-    }
+}
+/*-----------------profile------------------------*/
+
+
+$bg-dl:rgba(188,188,188,0.8);
+
+*{
+    box-sizing:border-box;
+    /*border: solid purple 1px;*/
 }
 .profile{
-    .photo{
+    width:80%;
+    display:flex;
+    margin:auto;
+    color:$gray-white;
+    flex-wrap:wrap;
+    padding-bottom:20px;
+    div{
+        flex-basis:33%;
+        flex-grow:1;
+    }
+    .photo-container{
+        position:relative;
+        display:flex;
         img{
-            max-width: 100%;
-            max-height: 100%;
-            border-radius: 50%;
+            height:80%;
+            width:80%;
+            margin:auto;
+            border-radius:50%;
         }
     }
+    .about-container{
+        padding:0 15px;
+        h1{
+            font-family: $title-font;
+        }
+        p{
+            transition: 1s;
+        }
+        &:hover{
+
+            p{
+                color:$hover-orange;
+            }
+        }
+    }
+    .contact-container{
+        h1{
+            font-family: $title-font;
+        }
+        span{
+            display:block;
+            padding-left:10px;
+            transition:0.5s;
+            padding-top:5px;
+            i{
+                font-size:150%;
+                padding-right:10px;
+            }
+            &:hover{
+                color:$hover-orange;
+                i{
+                    transform:scale(1.2);
+                }
+            }
+         }
+        .social{
+            display:flex;
+            padding-top:10px;
+            span{
+
+                i{
+                    padding:0;
+                    font-size:300%;
+                }
+            }
+         }
+
+        .download{
+            padding-top:10px;
+            padding-bottom:10px;
+            display:flex;
+            span{
+                position:relative;
+                i{
+                    font-size:300%;
+
+                }
+                &:after{ /*download message box*/
+                    content:"Download Resume";
+                    background-color:$bg-dl;
+                    color:white;
+                    height:25px;
+                    position:absolute;
+                    right:-130px;
+                    bottom:-0px;
+                    opacity:0;
+                    padding:5px 3px;
+                    border-radius:5px;
+                }
+                &:hover:after{
+                    opacity:1;
+                    transition:1s;
+                }
+             }
+         }
+    }
+
 }
+
 /*--------work-------------*/
 
 $green:#681;
 $primary: #f1c40f;
-$secondary: #ecf0f1;
-$background: #2c3e50;
 .container-work-edu{
     display:flex;
-    width:100%;
+    color:$gray-white;
+    @extend .container ;
     .container-work, .container-edu{
         width:50%;
+        h1{
+            transition: 1s;
+            .title-icon-container{
+                transition: 1s;
+            }
+        }
+        &:hover{
+            h1{
+                color: $hover-orange;
+                .title-icon-container{
+                    color: $hover-orange;
+                }
+            }
+
+        }
         ul{
             margin:0;
             position: relative;
             display:flex;
             flex-direction:column;
             list-style-type: none;
-            background:$background;
             li{
                 height:33.333%;
-                color:$secondary;
                 position:relative;
                 transition:0.5s;
                 padding-left:10px;
                 display:block;
+                h2,p{
+                    transition:1s;
+                }
 
                 &:after{ /*time stamp*/
                 content:"";
@@ -66,15 +215,21 @@ $background: #2c3e50;
                 border-radius:50%;
                 border: $green solid 3px;
                 position:absolute;
-                left:-20px;
-                top:-2px;
+                left:-18px;
+                top:25px;
                 background:$background;
                 display:block;
                 transition:0.5s;
             }
             &:hover:after{
+                border-color: $hover-orange;
                 transform:scale(1.5);
                 transition:0.5s;
+            }
+            &:hover{
+                h2,p{
+                    color: $hover-orange;
+                }
             }
 
             }
@@ -99,34 +254,41 @@ $bar-hover:#ff3300;
 $line:#cdcdcd;
 
 .container-skills{
+    @extend .container;
+    color:$gray-white;
 
     .sub-container{
       width:50%;
-      margin:auto;
+      font-family: $skill-font;
       span{
         display:block;
-        width:90%;
         margin:auto;
+        font-size:110%;
       }
       .bar-container{
-          height:5px;
+          height:11px;
           background-color:$line;
           position:relative;
           width:90%;
           margin:auto;
           border-radius:5px;
+          margin: 5px 0;
+          &:hover{
+              .skill{
+                  background-color:$bar-hover;
+                  height:150%;
+                  transition:0.3s;
+                  transform:translateY(-2px);
+              }
+
+          }
 
           .skill{
               height:100%;
               background-color:$skill-orange;
               border-radius:5px;
               transition:0.3s;
-              &:hover{
-                  background-color:$bar-hover;
-                  height:150%;
-                  transition:0.3s;
-                  transform:translateY(-1px);
-              }
+
               &.html{
                   width:80%;
               }
@@ -157,6 +319,80 @@ $line:#cdcdcd;
 
     }
 
+}
 
+/*--------projects---------------------*/
+$text-background:rgba(188,188,188,0.8);
+$text:#1a1a1a;
+.project-container{
+    @extend .container;
+    color:$gray-white;
+
+    .web-project-container{
+        width:100%;
+        margin:auto;
+        display:flex;
+        flex-wrap: wrap;
+        .project{
+            flex-basis:25%;
+            flex-grow:1;
+            margin:10px;
+            background-color:$pri;
+            height:150px;
+            position:relative;
+            border-radius: 5px;
+            box-shadow: 3px 3px 3px black;
+            background-size: 90% 90%;
+            background-repeat: no-repeat;
+            background-position: center;
+            cursor: pointer;
+            transition: 1s;
+            &.calculator{
+                background-image: url(./img/calculator.png);
+            }
+            &.simon{
+                background-image: url(./img/simonGame.png);
+            }
+            &.tic-tac-toe{
+                background-image: url(./img/ticTacToe.png);
+            }
+            &.pomodoro{
+                background-image: url(./img/pomodoroClock.png);
+            }
+            &.weather{
+                background-image: url(./img/weatherApp.png);
+            }
+            &.wiki{
+                background-image: url(./img/wikiviwer.png);
+            }
+            &.twitch{
+                background-image: url(./img/twitchTv.png);
+            }
+            &.randomQuote{
+                background-image: url(./img/randomQuote.png);
+            }
+            .detail{
+                width:100%;
+                text-align:center;
+                position:absolute;
+                color:$text;
+                background-color:$text-background;
+                bottom:0;
+                padding:10px;
+                opacity:0;
+                transition: 1s;
+            }
+            &:hover{
+                transform:scale(1.05);
+                .detail{
+                  opacity:1;
+                    transition: 1s;
+                }
+            }
+            &.notYet{
+                visibility:hidden;
+            }
+        }
+    }
 
 }
