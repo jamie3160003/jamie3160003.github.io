@@ -83,6 +83,7 @@ html {
   width: 80%;
   display: flex;
   margin: auto;
+  margin-top: 40px;
   color: #d8dfe2;
   flex-wrap: wrap;
   padding-bottom: 20px; }
