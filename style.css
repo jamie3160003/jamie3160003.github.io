@@ -97,6 +97,7 @@ html {
       height: 80%;
       width: 80%;
       margin: auto;
+      border: #d8dfe2 5px solid;
       border-radius: 50%; }
   .profile .about-container {
     padding: 0 15px; }
