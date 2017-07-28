@@ -455,6 +455,9 @@ $text:#1a1a1a;
                 background-position: center;
                 cursor: pointer;
                 transition: transform 1s;
+                &.recipe{
+                    background-image: url(./img/recipeBox.png);
+                }
                 &.to-do-list{
                     background-image: url(./img/to-do.png);
                 }
@@ -528,7 +531,7 @@ $text:#1a1a1a;
             flex-basis: auto;
         }
     }
-    
+
     .container-skills{
         .skills-table, .sub-container{
             flex:0 1 100%;

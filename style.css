@@ -314,6 +314,8 @@ html {
         background-position: center;
         cursor: pointer;
         transition: transform 1s; }
+        .project-container .web-project-container a .project.recipe {
+          background-image: url(./img/recipeBox.png); }
         .project-container .web-project-container a .project.to-do-list {
           background-image: url(./img/to-do.png); }
         .project-container .web-project-container a .project.calculator {
