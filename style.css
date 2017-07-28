@@ -224,6 +224,8 @@ html {
     flex: 0 1 50%;
     font-size: 100%;
     font-family: "Ubuntu Mono", monospace; }
+    .container-skills .skills-table h2 {
+      margin-bottom: 3px; }
     .container-skills .skills-table span {
       border: 1px #3e6e75 solid;
       padding: 5px;
@@ -231,7 +233,8 @@ html {
       box-shadow: 2px 2px 2px black;
       box-shadow: inset 2px 2px 2px #3e6e75;
       box-shadow: inset -2px -2px 2px #3e6e75;
-      background-color: #71adb5; }
+      background-color: #71adb5;
+      line-height: 40px; }
   .container-skills .sub-container {
     flex: 0 1 50%;
     font-family: "Ubuntu Mono", monospace; }
@@ -265,6 +268,8 @@ html {
           width: 60%; }
         .container-skills .sub-container .bar-container .skill.jq {
           width: 40%; }
+        .container-skills .sub-container .bar-container .skill.react {
+          width: 30%; }
         .container-skills .sub-container .bar-container .skill.scss {
           width: 70%; }
         .container-skills .sub-container .bar-container .skill.bs {
@@ -353,6 +358,9 @@ html {
 @media (max-width: 1000px) {
   .profile div {
     flex-basis: auto; }
+
+  .container-skills .skills-table, .container-skills .sub-container {
+    flex: 0 1 100%; }
 
   .container-work-edu {
     flex-direction: column; }
