@@ -215,11 +215,25 @@ html {
 /*----------skill---------------*/
 .container-skills {
   color: #d8dfe2;
-  transition: 1s; }
-  .container-skills:hover {
-    color: #ff6900; }
+  transition: 1s;
+  display: flex;
+  flex-wrap: wrap; }
+  .container-skills > h1 {
+    flex: 1 0 100%; }
+  .container-skills .skills-table {
+    flex: 0 1 50%;
+    font-size: 100%;
+    font-family: "Ubuntu Mono", monospace; }
+    .container-skills .skills-table span {
+      border: 1px #3e6e75 solid;
+      padding: 5px;
+      border-radius: 6px;
+      box-shadow: 2px 2px 2px black;
+      box-shadow: inset 2px 2px 2px #3e6e75;
+      box-shadow: inset -2px -2px 2px #3e6e75;
+      background-color: #71adb5; }
   .container-skills .sub-container {
-    width: 50%;
+    flex: 0 1 50%;
     font-family: "Ubuntu Mono", monospace; }
     .container-skills .sub-container span {
       display: block;
@@ -282,8 +296,7 @@ html {
     .project-container .web-project-container:hover {
       color: #ff6900; }
     .project-container .web-project-container a {
-      flex-basis: 25%;
-      flex-grow: 1; }
+      flex-basis: 25%; }
       .project-container .web-project-container a .project {
         margin: 10px;
         background-color: #71adb5;
@@ -296,6 +309,8 @@ html {
         background-position: center;
         cursor: pointer;
         transition: transform 1s; }
+        .project-container .web-project-container a .project.to-do-list {
+          background-image: url(./img/to-do.png); }
         .project-container .web-project-container a .project.calculator {
           background-image: url(./img/calculator.png); }
         .project-container .web-project-container a .project.simon {

@@ -306,17 +306,36 @@ $primary: #f1c40f;
 $skill-orange: #ffa500;
 $bar-hover:#ff3300;
 $line:#cdcdcd;
+$shadow:#3e6e75;
 
 .container-skills{
     @extend .container;
     color:$gray-white;
     transition: 1s;
-    &:hover{
-        color:$hover-orange;
+    display: flex;
+    flex-wrap: wrap;
+    &>h1{
+        flex: 1 0 100%;
     }
 
+    .skills-table{
+        flex: 0 1 50%;
+        font-size: 100%;
+        font-family: $skill-font;
+        span{
+            border: 1px $shadow solid;
+            padding:5px;
+            border-radius:6px;
+            box-shadow:2px 2px 2px black;
+            box-shadow:inset 2px 2px 2px $shadow;
+            box-shadow:inset -2px -2px 2px $shadow;
+            background-color:$sec;
+        }
+    }
+
+
     .sub-container{
-      width:50%;
+      flex: 0 1 50%;
       font-family: $skill-font;
       span{
         display:block;
@@ -416,7 +435,6 @@ $text:#1a1a1a;
         }
         a{
             flex-basis:25%;
-            flex-grow:1;
             .project{
 
                 margin:10px;
@@ -430,6 +448,9 @@ $text:#1a1a1a;
                 background-position: center;
                 cursor: pointer;
                 transition: transform 1s;
+                &.to-do-list{
+                    background-image: url(./img/to-do.png);
+                }
                 &.calculator{
                     background-image: url(./img/calculator.png);
                 }
