@@ -72,8 +72,10 @@ a,a:hover,a:active{
 
 }
 html{
-    background-image: url("./img/bg.jpg");
+    background-image: url("img/bg.jpg");
     background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .container-main{
@@ -153,6 +155,7 @@ $bg-dl:rgba(188,188,188,0.8);
             transition: 1s;
         }
         p{
+            font-size: 120%;
             font-family:$content-font;
             transition: 1s;
         }
@@ -400,34 +403,34 @@ $text:#1a1a1a;
                 cursor: pointer;
                 transition: transform 1s;
                 &.recipe{
-                    background-image: url(./img/recipeBox.png);
+                    background-image: url(img/recipeBox.png);
                 }
                 &.to-do-list{
-                    background-image: url(./img/to-do.png);
+                    background-image: url(img/to-do.png);
                 }
                 &.calculator{
-                    background-image: url(./img/calculator.png);
+                    background-image: url(img/calculator.png);
                 }
                 &.simon{
-                    background-image: url(./img/simonGame.png);
+                    background-image: url(img/simonGame.png);
                 }
                 &.tic-tac-toe{
-                    background-image: url(./img/ticTacToe.png);
+                    background-image: url(img/ticTacToe.png);
                 }
                 &.pomodoro{
-                    background-image: url(./img/pomodoroClock.png);
+                    background-image: url(img/pomodoroClock.png);
                 }
                 &.weather{
-                    background-image: url(./img/weatherApp.png);
+                    background-image: url(img/weatherApp.png);
                 }
                 &.wiki{
-                    background-image: url(./img/wikiviwer.png);
+                    background-image: url(img/wikiviwer.png);
                 }
                 &.twitch{
-                    background-image: url(./img/twitchTv.png);
+                    background-image: url(img/twitchTv.png);
                 }
                 &.randomQuote{
-                    background-image: url(./img/randomQuote.png);
+                    background-image: url(img/randomQuote.png);
                 }
                 .detail{
                     width:100%;
@@ -610,6 +613,14 @@ $text:#1a1a1a;
 
 };
 
+@media(max-width: 900px){
+    .container-contact{
+        flex-direction: column;
+        .container-left, .container-right{
+            flex-basis: 100%;
+        }
+    }
+};
 
 @media(max-width: 700px){
     .nav-container{
