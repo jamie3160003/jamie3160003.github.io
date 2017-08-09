@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script type="text/javascript" src="./main.js"></script>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <title>Yu-Jen Portfolio</title>
     </head>
@@ -21,13 +21,14 @@
                     <span class="exp">Experience</span>
                     <span class="proj">Projects</span>
                     <span class="prog">Skills</span>
+                    <span class="contact">Contact</span>
                 </nav>
             </div>
 
             <!---nav bar----->
 
             <!---profile----------------------------------->
-            <div id="section1" class="profile">
+            <div class="profile container">
                 <div class="photo-container">
                     <img src="./img/myPhoto.jpeg" alt="myPhoto">
                 </div>
@@ -37,32 +38,14 @@
 
                     </p>
                 </div>
-                <div class="contact-container">
-                    <h1 class="title">Contact</h1>
-                    <div class="contact">
-                        <span><i class="fa fa-envelope-o" aria-hidden="true"></i>jamie3160003@gmail.com</span>
-                        <span><i class="fa fa-phone" aria-hidden="true"></i>949-381-8960</span>
-                        <span><i class="fa fa-home" aria-hidden="true"></i>18817 Galleano St, La Puente, CA</span>
-                        <div class="social">
-                            <a href="https://www.facebook.com/jamie3160003" target="_blank"><span><i class="fa fa-facebook-official" aria-hidden="true"></i></span></a>
-                            <a href="http://www.linkedin.com/in/jamie3160003" target="_blank"><span><i class="fa fa-linkedin-square" aria-hidden="true"></i></span></a>
-                            <a href="https://github.com/jamie3160003" target="_blank"><span><i class="fa fa-github-square" aria-hidden="true"></i> </span></a>
-                        </div>
 
-                        <div class="download">
-                            <a href="https://drive.google.com/file/d/0B1X4_0PtzLlLRlVxelpETlI4ZGs/view?usp=sharing" target="_blank"><span><i class="fa fa-cloud-download" aria-hidden="true"></i></span></a>
-                        </div>
-
-
-                    </div>
-                </div>
             </div><!---profile----------------------------------->
 
             <div id="section2" class="container-work-edu"><!--work-edu-->
 
                 <div class="container-work">
 
-                    <h1><span class="title-icon-container"><i class="fa fa-briefcase icon"></i></span class="title">Work Experience</h1>
+                    <h1 class="title"><span class="title-icon-container"><i class="fa fa-briefcase icon"></i></span class="title">Work Experience</h1>
                     <ul>
                         <li>
                             <h2><a href="https://www.freecodecamp.org/" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i> FreeCodeCamp</a></h2>
@@ -100,7 +83,7 @@
                 </div>
 
                 <div class="container-edu">
-                    <h1><span class="title-icon-container"><i class="fa fa-university icon"></i></span class="title">Education</h1>
+                    <h1 class="title"><span class="title-icon-container"><i class="fa fa-university icon"></i></span class="title">Education</h1>
                     <ul>
                         <li>
                             <h2>University of California, Irvine</h2>
@@ -121,10 +104,10 @@
             </div><!--work-edu-->
 
             <div id="section3" class="project-container">
-                <h1><span class="title-icon-container"><i class="fa fa-tasks icon"></i></span class="title">Projects</h1>
+                <h1 class="title"><span class="title-icon-container"><i class="fa fa-tasks icon"></i></span>Projects</h1>
 
                 <div class="web-project-container">
-                    <h2>ReactJS Applications</h2>
+                    <h2>React.js Applications</h2>
 
                     <a href="https://jamie3160003.github.io/To-do-list-ReactJS-/src/index.html" target="_blank">
                         <div class="project to-do-list">
@@ -229,8 +212,8 @@
 
             </div>
 
-            <div id="section4" class="container-skills">
-                <h1><span class="title-icon-container"><i class="fa fa-laptop icon"></i></span class="title">Skills</h1>
+            <div class="container-skills">
+                <h1 class="title"><span class="title-icon-container"><i class="fa fa-laptop icon"></i></span>Skills</h1>
 
                 <div class="sub-container">
 
@@ -249,9 +232,14 @@
                         <div class="skill js"></div>
                     </div>
 
-                    <span>ReactJS</span>
+                    <span>React.js</span>
                     <div class="bar-container">
                         <div class="skill react"></div>
+                    </div>
+
+                    <span>Node.js</span>
+                    <div class="bar-container">
+                        <div class="skill node"></div>
                     </div>
 
                     <span>JQuery</span>
@@ -293,8 +281,9 @@
                             <div class="set">
                                 <span>Javascript</span>
                                 <span>ECMAScript6</span>
-                                <span>ReactJS</span>
+                                <span>Node.js</span>
                                 <span>Java</span>
+                                <span>Node.js</span>
                                 <span>JQuery</span>
                                 <span>Matlab</span>
                             </div>
@@ -316,7 +305,40 @@
 
 
             </div><!--container-skills-->
+            <div class="container container-contact">
+                <div class="contact-left">
+                    <h1 class="title"><span class="title-icon-container"><i class="fa fa-commenting" aria-hidden="true"></i></span class="title">Contact</h1>
+                    <br>
+                    <div class="contact">
+                        <span class="reach"><i class="fa fa-envelope-o" aria-hidden="true"></i>jamie3160003@gmail.com</span>
+                        <span class="reach"><i class="fa fa-phone" aria-hidden="true"></i>949-381-8960</span>
+                        <span class="reach"><i class="fa fa-home" aria-hidden="true"></i>18817 Galleano St, La Puente, CA</span>
+                        <div class="social">
+                            <a href="https://www.facebook.com/jamie3160003" target="_blank"><span class="reach"><i class="fa fa-facebook-official" aria-hidden="true"></i></span></a>
+                            <a href="http://www.linkedin.com/in/jamie3160003" target="_blank"><span class="reach"><i class="fa fa-linkedin-square" aria-hidden="true"></i></span></a>
+                            <a href="https://github.com/jamie3160003" target="_blank"><span class="reach"><i class="fa fa-github-square" aria-hidden="true"></i> </span></a>
+                        </div>
 
+                        <div class="download">
+                            <a href="https://drive.google.com/file/d/0B1X4_0PtzLlLRlVxelpETlI4ZGs/view?usp=sharing" target="_blank"><span class="reach"><i class="fa fa-cloud-download" aria-hidden="true"></i></span></a>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="message-container contact-right">
+                    <h1 class="title"><span class="title-icon-container"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>Leave a Message</h1>
+                    <input type="text" placeholder="Your name">
+                    <br>
+                    <input type="text" placeholder="Your Email Address">
+                    <br>
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Type your Message Here..."></textarea>
+                    <br>
+                    <button type="submit">Submit</button>
+                </div>
+
+            </div>
 
         </div>
 

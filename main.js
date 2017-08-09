@@ -4,6 +4,8 @@ $(document).ready(function(){
     var expPos = $(".container-work-edu").offset().top - navHeight + margin(".container-work-edu");
     var projPos = $(".project-container").offset().top - navHeight + margin(".project-container");
     var progPos = $(".container-skills").offset().top - navHeight + margin(".container-skills");
+    var contactPos = $(".container-contact").offset().top - navHeight + margin(".container-contact");
+
     var aboutLen = $(".about").outerHeight(true);
     var expLen = $(".about").outerHeight(true);
     var projLen = $(".about").outerHeight(true);
@@ -27,6 +29,9 @@ $(document).ready(function(){
     });
     $(".prog").click(function(){
         focus(".prog",progPos,true);
+    });
+    $(".contact").click(function(){
+        focus(".contact",contactPos,true);
     });
 
 
