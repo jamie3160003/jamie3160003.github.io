@@ -377,9 +377,12 @@ $text:#1a1a1a;
         margin:auto;
         display:flex;
         flex-wrap: wrap;
-        h2{
+        h2,p{
             flex-basis:100%;
             transition:1s;
+        }
+        p{
+            margin:1px 0;
         }
         &:hover{
             color:$hover-orange;
